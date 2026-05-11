@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>The Colorado Experience - Modern Layout</title>
+    <style>
+        /* Loại bỏ lề mặc định của trình duyệt */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Ngăn cuộn toàn trang */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Khu vực Logo (Header) - Tương ứng logoframe.html */
+        #header {
+            height: 150px;
+            width: 100%;
+            border-bottom: 2px solid #ccc;
+            background-color: #fff;
+        }
+
+        #header iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Container chứa cả Menu và Main Content */
+        #container {
+            display: flex; /* Sử dụng Flexbox để chia cột */
+            height: calc(100% - 150px); /* Chiều cao còn lại sau khi trừ header */
+        }
+
+        /* Khu vực Menu bên trái - Tương ứng Link.html */
+        #sidebar {
+            width: 30%;
+            border-right: 2px solid #ccc;
+            height: 100%;
+        }
+
+        #sidebar iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Khu vực Nội dung bên phải - Tương ứng Colorado.html */
+        #main-content {
+            width: 70%;
+            height: 100%;
+        }
+
+        #main-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <iframe src="logoframe.html" name="logo"></iframe>
+    </div>
+
+    <div id="container">
+        
+        <div id="sidebar">
+            <iframe src="Link.html" name="menu"></iframe>
+        </div>
+
+        <div id="main-content">
+            <iframe src="Colorado.html" name="main_content"></iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
