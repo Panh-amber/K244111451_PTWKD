@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Ex49: Online Classifield</title>
+        <script>
+            function searchSimulation()
+            {
+                let keywords = document.getElementById("enter").value;
+                if (keywords.trim() === "") {
+                    alert("Search formulation: No keywords entered!!");
+                } else {
+                    alert("Search formulation:" + keywords);
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: rgb(178, 249, 249);">
+        <form id="frm_ex49">
+            <h1 style="color: red;">Online Classifieds Search Form</h1>
+            <hr style="color: black;" border="10px"/>
+            <h3>1) Search for a classified in the following sections: </h3>
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" name="sec" id="sec1"/>
+                        <label for="sec1">Employment</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="sec" id="sec2"/>
+                        <label for="sec2">Personal</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="sec" id="sec3"/>
+                        <label for="sec3">For Sale</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="sec" id="sec4"/>
+                        <label for="sec4">Miscellanecus</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="sec" id="sec5"/>
+                        <label for="sec5">Housing</label>
+                    </td>
+                    <td>
+                        <input type="radio" name="sec" id="sec6"/>
+                        <label for="sec6">All of the above</label>
+                    </td>
+                </tr>
+            </table>
+            <h3>2) Search the following publications: </h3>
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="pub1" id="pub1"/>
+                        <label for="pub1">Midwest times</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="pub2" id="pub2"/>
+                        <label for="pub2">Modern News</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="pub3" id="pub3"/>
+                        <label for="pub3">Employment Today</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="pub4" id="pub4"/>
+                        <label for="pub4">Great Lakes Classifieds</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="pub5" id="pub5"/>
+                        <label for="pub5">Middleton Daily</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" name="pub6" id="pub6"/>
+                        <label for="pub6">Cashtown Daily News</label>
+                    </td>
+                </tr>
+            </table>
+            <h3>3) From
+                <input type="date" name="datestart" id="datestart"/> to
+                <input type="date" name="dateend" id="dateend"/>
+            </h3>
+            <h3>4) Enter a few keywords to describe the classified. </h3>
+            <input type="text" name="enter" id="enter" style="width: 100%;"/>
+            <h3>5) Click one of the options below: </h3>
+            <img src="images/Search.gif" id="search" onclick="searchSimulation()"/>
+            <a href="https://is.uel.edu.vn/" target="_blank">
+                <img src="images/Help.gif" alt="help">
+            </a>
+            <input type="image" src="images/Cancel.gif" alt="cancle" formnovalidate type="reset"/>
+        </form>
+    </body>
+</html>

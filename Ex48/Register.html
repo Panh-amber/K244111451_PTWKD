@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>Ex48: Register</title>
+        <script>
+            function register()
+            {
+                alert("Registration")
+            }
+        </script>
+    </head>
+    <body style="background-color: #AEE3FF;">
+        <div align="center">
+            <p><img src="images/Jackson.gif"/></p>
+            <h2>Registration Form</h2>
+            <p>Register your Jackson Electronics product here</p>
+        </div>
+        <form 
+            name="frm_login"
+            action="Register.html"
+            method="post">
+        <table align="center">
+            <tr>
+                <td>First Name:</td>
+                <td colspan="2">
+                    <input type="text" name="First Name:" id="First Name:" style="width:110px">
+                    Last Name:
+                    <input type="text" name="Last Name:" id="Last Name:">
+                </td>
+            </tr>
+            <tr>
+                <td>Address #1:</td>
+                <td colspan="2">
+                    <input type="text" name="Address #1" id="Address #1" style="width: 220px;">
+                </td>
+            </tr>
+            <tr>
+                <td>Address #2:</td>
+                <td colspan="2">
+                    <input type="text" name="Address #2" id="Address #2" style="width: 220px;">
+                </td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td colspan="2">
+                    <input type="text" name="City" id="City">
+                    State:
+                    <input type="text" name="State" id="State" style="width: 50px;">
+                    Zip:
+                    <input type="text" name="Zip" id="Zip"style="width: 80px;">
+                </td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td colspan="2">
+                    <input type="text" name="Country" id="Country">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><hr style="color:brown" height="10px"/></td>
+            </tr>
+        
+            <tr>
+                <td>Product:</td>
+                <td colspan="2">
+                    <select>
+                        <option value="1">P01</option>
+                        <option value="2">P02</option>
+                        <option value="3">P03</option>
+                        <option value="4">P04</option>
+                        <option value="5">P05</option>
+                        <option value="6">P06</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Date Purchased:</td>
+                <td colspan="2">
+                    <input type="text" name="datepurchased" id="datepurchased">
+                </td>
+            </tr>
+            <tr>
+                <td>Series #:</td>
+                <td colspan="2">
+                    <input type="text" name="series" id="series">
+                </td>
+            </tr>
+            <tr>
+                <td>Used for:</td>
+                <td>
+                    <input type="radio" name="uf" id="uf1">
+                    <label for="uf1">Home</label>
+                </td>
+                <td>
+                    <input type="radio" name="uf" id="uf2">
+                    <label for="uf2">Educational Institution</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="radio" name="uf" id="uf3">
+                    <label for="uf3">Business</label>
+                </td>
+                <td>
+                    <input type="radio" name="uf" id="uf4">
+                    <label for="uf2">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td colspan="2">
+                    <input type="radio" name="uf" id="uf5">
+                    <label for="uf5">Government</label>
+                </td>
+            </tr>
+            <tr>
+                <td>System(check all that apply):</td>
+                <td>
+                    <input type="checkbox" name="s1" id="s1">
+                    <label for="s1">Window</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="s2" id="s2">
+                    <label for="s2">UNIX</label>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="checkbox" name="s3" id="s3">
+                    <label for="s3">Macintosh</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="s4" id="s4">
+                    <label for="s2">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <hr style="color:brown" height="10px"/>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="vertical-align: top;">
+                    Comments?:
+                </td>
+                <td colspan="3">
+                 <input type="text" name="comment" id="comment" style="width:500px;height:100px">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <p align="center">
+                        <button type="button" onclick="javascript:register()">Click to register</button>
+                        <button type="reset">Click to cancel</button>
+                    </p>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </body>
+</html>
