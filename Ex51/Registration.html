@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>Ex51: Newborn Registration</title>
+        <style>
+            h1, td {
+                color: white;
+            }
+            td {
+                line-height: 2;
+            }
+        </style>
+    </head>
+    <body style="background-color: #098080;">
+        <form id="frm_ex51">
+            <div align="center">
+                <p>
+                    <img src="images/Logo.gif"/>
+                </p>
+                <h1>Newborn Registration</h1>
+            </div>
+            <table align="center">
+                <tr>
+                    <td>
+                        Date:
+                        <input type="date" name="date" id="date"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1) Infant's first name:
+                        <input type="text" name="firstname1" id="firstname1"/>
+                        Last:
+                        <input type="text" name="last1" id="last1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2) Medical Record #:
+                        <input type="text" name="medical" id="medical" style="width: 100px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3) Date of birth:
+                        <input type="date" name="dateofbirth" id="dateofbirth"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        4) Birth weight:
+                        <input type="text" name="birthweigh" id="birthweigh" style="width: 100px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5) APGAR score:
+                        <input type="text" name="APGAR" id="APGAR" style="width: 70px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        6) Mother's first name:
+                        <input type="text" name="firstname2" id="firstname2"/>
+                        Last:
+                        <input type="text" name="last2" id="last2"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        7) Father's first name:
+                        <input type="text" name="firstname3" id="firstname3"/>
+                        Last:
+                        <input type="text" name="last3" id="last3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span style="display:inline-block; vertical-align:top; margin-right:10px;">
+                            8) Physician (check all that apply:)
+                        </span>
+                    <select multiple="5">
+                        <option value="1">Dr. Warren Albert</option>
+                        <option value="2">Dr. Maria Alvarez</option>
+                        <option value="3">Dr. Karen Brinkman</option>
+                        <option value="4">Dr. Micheal Kerry</option>
+                        <option value="5">Dr. Tran Duy Thanh</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="submit">Register</button>
+                        <button type="reset">Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
