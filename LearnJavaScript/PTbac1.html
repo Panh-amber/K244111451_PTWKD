@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Tiêu đề trang</title>
+        <script>
+            function Calculate()
+            {
+                a = eval(myform.a.value); //a,b là form elements
+                b = eval(myform.b.value);
+                if (a == 0)
+                {
+                    if (b == 0)
+                    {
+                        myform.result1.value = "Vô số nghiệm";
+                        //myform.result.innerHTML = "Vô số nghiệm";
+                        myform.result.innerHTML = "<Font color='orange'>Vô số nghiệm</Font>";
+                    }
+                    else
+                    {
+                        myform.result1.value = "Vô nghiệm";
+                        //myform.result.innerHTML = "Vô nghiệm";
+                        myform.result.innerHTML = "<Font color='red'>Vô nghiệm</Font>";
+                    }
+                }
+                else
+                {
+                    x = -b / a;
+                    myform.result1.value = x;
+                    //myform.result.innerHTML = " x=" + x;
+                    myform.result.innerHTML = "<Font color='blue'>x=" + x + "</Font>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>First Degree Equation</h3>
+        <form name="myform"> 
+            <table>
+                <tr>
+                    <td>Hệ số a:</td>
+                    <td><input type="text" name="a"></td>
+                </tr>
+                <tr>
+                    <td>Hệ số b:</td>
+                    <td><input type="text" name="b"></td>
+                </tr>
+                <tr>
+                    <td>Result 1:</td>
+                    <td><input type="text" name="result1" readonly></td>
+                </tr>
+                <tr>
+                    <td>Result 2:</td>
+                    <td><div name="result" id="result"></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="Caculate" onclick="Calculate()">
+                        |
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+

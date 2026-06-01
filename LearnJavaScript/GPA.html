@@ -1,0 +1,130 @@
+<html>
+<head>
+    <title>GPA Calculation</title>
+
+    <script>
+        function changeCourse() {
+            var course = document.getElementById("course").value;
+
+            if (course == "web") {
+                document.getElementById("qtPercent").innerHTML = "15%";
+                document.getElementById("gkPercent").innerHTML = "20%";
+                document.getElementById("ckPercent").innerHTML = "50%";
+
+                document.getElementById("rowT").style.display = "";
+
+                document.getElementById("tPercent").innerHTML = "15%";
+            }
+            else if (course == "ptdl") {
+                document.getElementById("qtPercent").innerHTML = "30%";
+                document.getElementById("gkPercent").innerHTML = "20%";
+                document.getElementById("ckPercent").innerHTML = "50%";
+
+                document.getElementById("rowT").style.display = "none";
+            }
+            else {
+                document.getElementById("qtPercent").innerHTML = "25%";
+                document.getElementById("gkPercent").innerHTML = "25%";
+                document.getElementById("ckPercent").innerHTML = "50%";
+
+                document.getElementById("rowT").style.display = "none";
+            }
+        }
+
+        function calculateGPA() {
+            var course = document.getElementById("course").value;
+
+            var qt = eval(document.getElementById("qt").value);
+            var gk = eval(document.getElementById("gk").value);
+            var ck = eval(document.getElementById("ck").value);
+
+            var gpa;
+
+            if (course == "ptdl") {
+                gpa = qt * 0.3 + gk * 0.2 + ck * 0.5;
+            }
+            else if (course == "gt") {
+                gpa = qt * 0.25 + gk * 0.25 + ck * 0.5;
+            }
+            else {
+                var t = eval(document.getElementById("t").value);
+
+                gpa = qt * 0.15 + gk * 0.2 + ck * 0.5 + t * 0.15;
+            }
+
+            document.getElementById("result").value = gpa;
+        }
+    </script>
+
+</head>
+
+<body onload="changeCourse()">
+
+    <h2>GPA Calculation</h2>
+    <form>
+    <table border="1">
+
+        <tr>
+            <td colspan="2">Select Course</td>
+        <tr>
+            <td colspan="2">
+                <select id="course" onchange="changeCourse()">
+                    <option value="ptdl">Phân tích dữ liệu</option>
+                    <option value="gt">Giới thiệu ngành TMĐT</option>
+                    <option value="web">Phát triển web kinh doanh</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>QT</td>
+            <td>
+                <input type="text" id="qt">
+                <span id="qtPercent"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>GK</td>
+            <td>
+                <input type="text" id="gk">
+                <span id="gkPercent"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>CK</td>
+            <td>
+                <input type="text" id="ck">
+                <span id="ckPercent"></span>
+            </td>
+        </tr>
+
+        <tr id="rowT" style="display:none">
+            <td>Cột T</td>
+            <td>
+                <input type="text" id="t">
+                <span id="tPercent"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>GPA</td>
+            <td>
+                <input type="text" id="result" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="button" value="Calculate GPA"
+                       onclick="calculateGPA()">
+                |
+                <input type="reset" value="Clear">
+            </td>
+        </tr>
+
+    </table>
+    </form>
+</body>
+</html>
