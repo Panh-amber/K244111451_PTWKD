@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Ex54</title>
+        <style>
+            td {
+                border: 1px solid black;
+                width: 150px;
+                text-align: center;
+            }
+            fieldset {
+                width: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+        <form name="myform">
+            <fieldset>
+                <legend>Math Function</legend>
+                <table>
+                    <tr>
+                        <td>a:</td>
+                        <td><input type="text" name="a" id="a"/></td>
+                    </tr>
+                    <tr>
+                        <td>b:</td>
+                        <td><input type="text" name="b" id="b"/></td>
+                    </tr>
+                    <tr>
+                        <td>c:</td>
+                        <td><input type="text" name="c" id="c"/></td>
+                    </tr>
+                    <tr>
+                        <td>Result:</td>
+                        <td><input type="text" name="result" id="result"/></td>
+                    </tr>
+                    <tr >
+                        <td colspan="2">
+                            <button type="button" onclick="calculateMax()">MAX</button>
+                            <button type="button" onclick="calculateMin()">MIN</button>
+                            <button type="button" onclick="calculateSin()">sin(a)</button>
+                            <button type="button" onclick="calculateCos()">cos(a)</button>
+                            <button type="button" onclick="calculatePower()">a^b</button>
+                            <button type="reset">Clear</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <script>
+            function calculateMax() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var c = parseFloat(myform.c.value);
+                var max = Math.max(a, b, c);
+                result.value = max;
+            }
+
+            function calculateMin() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var c = parseFloat(myform.c.value);
+                var min = Math.min(a, b, c);
+                result.value = min;
+            }
+
+            function calculateSin() {
+                var a = parseFloat(myform.a.value);
+                var sinA = Math.sin(a);
+                result.value = sinA;
+            }
+
+            function calculateCos() {
+                var a = parseFloat(myform.a.value);
+                var cosA = Math.cos(a);
+                result.value = cosA;
+            }
+
+            function calculatePower() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var power = Math.pow(a, b);
+                result.value = power;
+            }
+        </script>
+    </body>
+</html>
