@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Ex57</title>
+        <style>
+            table {
+                border: 2px solid black;
+            }
+
+            td, th {
+                border: none;
+                padding: 8px;
+            }
+
+            button{
+                color: black;
+                background: gold;
+                border: 1px solid black;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function calcItem(price, qtyId, itemId) {
+                var qty = parseFloat(document.getElementById(qtyId).value);
+                if (isNaN(qty) || qty < 0) {
+                    alert("Please enter a valid quantity for " + qtyId);
+                    document.getElementById(qtyId).value = "";
+                    document.getElementById(itemId).value = "";
+                    return;
+                }
+                var itemTotal = price * qty;
+                document.getElementById(itemId).value = itemTotal.toFixed(2);
+            }
+
+            function calculateTotal() {
+                var item1 = parseFloat(document.getElementById('item1').value) || 0;
+                var item2 = parseFloat(document.getElementById('item2').value) || 0;
+                var item3 = parseFloat(document.getElementById('item3').value) || 0;
+                var total = item1 + item2 + item3;
+                document.getElementById('total').value = total.toFixed(2);
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Part Number</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Item table</th>
+            </tr>
+
+            <tr>
+                <td>C112</td>
+                <td>Mouse</td>
+                <td>19.95$</td>
+                <td>
+                    <input type="text"
+                        id="qty1"
+                        onchange="calcItem(19.95,'qty1','item1')">
+                </td>
+                <td>
+                    <input type="text" id="item1" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td>B124</td>
+                <td>Keyboard US</td>
+                <td>29.95$</td>
+                <td>
+                    <input type="text"
+                        id="qty2"
+                        onchange="calcItem(29.95,'qty2','item2')">
+                </td>
+                <td>
+                    <input type="text" id="item2" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td>U125</td>
+                <td>USB KingMax</td>
+                <td>39.95$</td>
+                <td>
+                    <input type="text"
+                        id="qty3"
+                        onchange="calcItem(39.95,'qty3','item3')">
+                </td>
+                <td>
+                    <input type="text" id="item3" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="5"><hr/></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align:right; font-weight:bold;">Total:</td>
+                <td><input type="text" id="total" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align:right;">
+                    <button onclick="calculateTotal()">
+                        Sum
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+<!-- Dùng Innertext để làm số 19.95
+ Nhập rỗng thì Alert-->
