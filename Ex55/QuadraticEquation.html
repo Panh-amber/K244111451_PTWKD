@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Ex55</title>
+        <style>
+            h4 {
+                margin: 0;
+            }
+            td {
+                border: 1px solid black;
+                text-align: center;
+            }
+            #result {
+                color: red;
+            }
+            button {
+                border: 2px solid goldenrod;
+                padding: 3px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+        <script>
+            function CalculateQuadraticEquation() {
+                var a = parseFloat(myform.a.value);
+                var b = parseFloat(myform.b.value);
+                var c = parseFloat(myform.c.value);
+                if (a === 0) {
+                    // Phương trình bậc nhất
+                    if (b === 0) {
+                        if (c === 0) {
+                            result.value = "Phương trình vô số nghiệm";
+                        } else {
+                            result.value = "Phương trình vô nghiệm";
+                        }
+                    } else {
+                        var x = -c / b;
+                        result.value = "Nghiệm: x = " + x;
+                    }
+                } else {
+                    // Phương trình bậc hai
+                    var delta = b * b - 4 * a * c;
+                    if (delta > 0) {
+                        var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                        var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                        result.value = "Hai nghiệm phân biệt: x1 = " + x1 + ", x2 = " + x2;
+                    } else if (delta === 0) {
+                        var x = -b / (2 * a);
+                        result.value = "Nghiệm kép: x = " + x;
+                    } else {
+                        result.value = "Phương trình vô nghiệm";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myform">
+                <table>
+                    <tr>
+                        <td colspan="2" style="background-color: rgb(183, 221, 166);">
+                            <h4>The Quadratic Equation</h4>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>a:</td>
+                        <td><input type="text" name="a" id="a" style="width: 300px;"/></td>
+                    </tr>
+                    <tr>
+                        <td>b:</td>
+                        <td><input type="text" name="b" id="b" style="width: 300px;"/></td>
+                    </tr>
+                    <tr>
+                        <td>c:</td>
+                        <td><input type="text" name="c" id="c" style="width: 300px;"/></td>
+                    </tr>
+                    <tr>
+                        <td>Result:</td>
+                        <td><input type="text" name="result" id="result" readonly style="width: 300px;"/></td>
+                    </tr>
+                    <tr >
+                        <td></td>
+                        <td>
+                            <button type="button" onclick="CalculateQuadraticEquation()">Find Solution</button>
+                            <button type="reset">Clear</button>
+                        </td>
+                    </tr>
+                </table>
+        </form>
+    </body>
+</html>
+
+<!--if a=0 thì phương trình trở thành phương trình bậc nhất, có nghiệm x=-c/b else tính delta rồi xét delta để tìm nghiệm của phương trình bậc hai
+    
