@@ -1,0 +1,33 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    padding:20px;
+}
+
+button{
+    width:150px;
+    height:40px;
+    font-size:20px;
+    margin-right:20px;
+}
+
+label{
+    font-size:18px;
+    margin-left:15px;
+    margin-right:10px;
+}
+
+input{
+    width:200px;
+    height:30px;
+    font-size:18px;
+}
+
+h2{
+    margin-top:30px;
+}
+
+li{
+    font-size:20px;
+}

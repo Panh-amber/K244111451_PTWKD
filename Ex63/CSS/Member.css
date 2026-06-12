@@ -1,0 +1,181 @@
+/*  GLOBAL */
+body{
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    margin: 8px;
+}
+
+h1, h2{
+    font-size: 56px;
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 32px;
+    margin-top: 40px;
+}
+
+hr{
+    margin-bottom: 35px;
+}
+
+/* FORM TABLE*/
+
+.form-table{
+    border-collapse: collapse;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.form-table tr {
+    margin-bottom: 5px;
+}
+
+.form-table td{
+    padding: 10px;
+    vertical-align: top;
+}
+
+.label-td{
+    width: 200px;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+.label-td label{
+    font-size: 26px;
+}
+
+.button-td{
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* textbox */
+
+input[type=text]{
+    width: 380px;
+    height: 35px;
+    font-size: 24px;
+    font-family: "Times New Roman", serif;
+}
+
+/*  DATE DROPDOWNS */
+
+.date-input{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.date-input label{
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+select{
+    height: 40px;
+    font-size: 22px;
+    font-family: "Times New Roman", serif;
+    padding: 2px 5px;
+}
+
+/*  RADIO + CHECKBOX */
+
+.radio-group,
+.checkbox-group,
+.color-group{
+    display: block;
+}
+
+.radio-group label,
+.checkbox-group label,
+.color-option label{
+    font-size: 24px;
+}
+
+input[type=radio],
+input[type=checkbox]{
+    transform: scale(1.4);
+    margin-right: 6px;
+}
+
+.checkbox-group div{
+    margin-bottom: 6px;
+}
+
+.color-option{
+    margin-bottom: 8px;
+}
+
+/* COLOR LABELS */
+
+.color-label{
+    padding: 0 4px;
+    display: inline-block;
+}
+
+.blue{
+    background: blue;
+    color: black;
+}
+
+.red{
+    background: red;
+    color: black;
+}
+
+.yellow{
+    background: yellow;
+    color: black;
+}
+
+.green{
+    background: green;
+    color: black;
+}
+
+.violet{
+    background: violet;
+    color: black;
+}
+
+/* BUTTONS */
+
+.btn{
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
+    padding: 4px 14px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/*  MEMBER TABLE*/
+
+#memberTable{
+    border-collapse: collapse;
+    margin-top: 35px;
+    width: auto;
+    font-size: 22px;
+}
+
+#memberTable th{
+    background: #0000ff;
+    color: white;
+    border: 1px solid black;
+    text-align: left;
+    padding: 3px;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+#memberTable td{
+    border: 1px solid black;
+    padding: 3px;
+    text-align: left;
+}
+
+#memberTable tbody tr:hover{
+    background: yellow;
+}

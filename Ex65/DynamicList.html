@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Web Node</title>
+        <link rel="stylesheet" href="CSS/maincss.css">
+        <script src="JS/mainjs.js"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <button onclick="addNode()">Add Node</button>
+                </td>
+
+                <td>Content</td>
+
+                <td>
+                    <input type="text" id="addContent">
+                </td>
+
+                <td>Position</td>
+
+                <td>
+                    <input type="number" id="addPos">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="removeNode()">Remove Node</button>
+                </td>
+
+                <td></td>
+                <td></td>
+
+                <td>Position</td>
+
+                <td>
+                    <input type="number" id="removePos">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button onclick="modifyNode()">Modify Node</button>
+                </td>
+
+                <td>New Content</td>
+
+                <td>
+                    <input type="text" id="newContent">
+                </td>
+
+                <td>Position</td>
+
+                <td>
+                    <input type="number" id="modifyPos">
+                </td>
+            </tr>
+        </table>
+
+        <h2>Web Node</h2>
+
+        <div id="webNode">
+            <ul id="nodeList">
+                <li>Data base</li>
+                <li>Web1</li>
+                <li>Web2</li>
+            </ul>
+        </div>
+    </body>
+</html>
+

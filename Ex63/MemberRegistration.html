@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Member Registration</title>
+        <link rel="stylesheet" type="text/css" href="CSS/Member.css">
+        <script src="JS/Memberdata.js"></script>
+        <script src="JS/Memberjs.js"></script>
+    </head>
+    <body>
+        <h1>Member Registration</h1>
+        <hr/>
+        
+        <form name="memberForm">
+            <table class="form-table" border ="1">
+                <tr>
+                    <td class="label-td"><label>Name(*)</label></td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td class="label-td"><label>Birthday(*)</label></td>
+                    <td>
+                        <span class="date-input">
+                            <label>Day:</label>
+                            <select name="day" id="day"></select>
+                        </span>
+                        <span class="date-input">
+                            <label>Month:</label>
+                            <select name="month" id="month"></select>
+                        </span>
+                        <span class="date-input">
+                            <label>Year:</label>
+                            <select name="year" id="year"></select>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-td"><label>Gender(*)</label></td>
+                    <td>
+                        <div class="radio-group">
+                            <input type="radio" name="gender" value="Man" id="man"> <label for="man">Man</label>
+                            <input type="radio" name="gender" value="Woman" id="woman"> <label for="woman">Woman</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-td"><label>Email(*)</label></td>
+                    <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td class="label-td" colspan="2"><label>Your favorite:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="hobbies" value="Shopping" id="hobbyShopping" checked> <label for="hobbyShopping">Shopping</label><br>
+                            <input type="checkbox" name="hobbies" value="Tourism" id="hobbyTourism" checked> <label for="hobbyTourism">Tourism</label><br>
+                            <input type="checkbox" name="hobbies" value="Chat" id="hobbyChat" checked> <label for="hobbyChat">Chat</label><br>
+                            <input type="checkbox" name="hobbies" value="Read a book" id="hobbyRead" checked> <label for="hobbyRead">Read a book</label><br>
+                            <input type="checkbox" name="hobbies" value="Listening to music" id="hobbyMusic" checked> <label for="hobbyMusic">Listening to music</label><br>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-td" colspan="2"><label>Your favorite color:</label>
+                    <div class="color-option">
+                        <input type="radio" name="color" value="Blue" id="colorBlue" checked>
+                        <label for="colorBlue" class="color-label blue">Blue</label><br>
+                                
+                        <input type="radio" name="color" value="Red" id="colorRed"> 
+                        <label for="colorRed" class="color-label red">Red</label><br>
+                                
+                        <input type="radio" name="color" value="Yellow" id="colorYellow"> 
+                        <label for="colorYellow" class="color-label yellow">Yellow</label><br>
+                                
+                        <input type="radio" name="color" value="Green" id="colorGreen"> 
+                        <label for="colorGreen" class="color-label green">Green</label><br>
+                                
+                        <input type="radio" name="color" value="Violet" id="colorViolet"> 
+                        <label for="colorViolet" class="color-label violet">Violet</label><br>
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button-td">
+                        <button type="button" onclick="register_member()" class="btn">Sign up</button>
+                        <button type="reset" class="btn">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <table id="memberTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birthday</th>
+                    <th>Hobbies</th>
+                    <th>Colors</th>
+                </tr>
+            </thead>
+            <tbody id="memberBody">
+            </tbody>
+        </table>
+
+        <script>
+            load_date_dropdowns();
+            load_data(members, document.getElementById("memberBody"));
+        </script>
+    </body>
+</html>
