@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Employee List</title>
+        <link rel="stylesheet" href="css/maincss.css">
+    </head>
+    <body onload="load_employees()">
+        <label for="titleSelect">Title:</label>
+        <select id="titleSelect" onchange="show_employees_by_title()">
+            <option value="">-- Select title --</option>
+        </select>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="employeeBody"></tbody>
+        </table>
+        <script src="js/mainjs.js"></script>
+    </body>
+</html>
