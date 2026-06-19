@@ -1,0 +1,29 @@
+body {
+    margin: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select {
+    margin-left: 10px;
+    padding: 4px;
+}
+
+#employeeTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#employeeTable th, #employeeTable td {
+    border: 1px solid #999;
+    padding: 6px;
+    text-align: left;
+}
+
+#employeeTable th {
+    background-color: #3f7a3f;
+    color: white;
+}

@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Exercise 67: XML - DOM Parser</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/mainjs.js"></script>
+	</head>
+
+	<body>
+		<div id="table_page">
+			<table id="tblstudents">
+				<thead>
+					<tr>
+						<td colspan="4" style="background-color: rgb(235, 176, 15); color: black; font-weight: bold; text-align: center;">List of Students</td>
+					</tr>
+					<tr>
+						<th onclick="sortColumn('id')">Student ID</th>
+						<th onclick="sortColumn('name')">Student Name</th>
+						<th onclick="sortColumn('birthday')">Birthday</th>
+						<th onclick="sortColumn('gender')">Gender</th>
+					</tr>
+				</thead>
+				<tbody id="bodystudent">
+				</tbody>
+			</table>
+		</div>
+
+		<div id="detail_page">
+			<button onclick="backToList()">Back to List</button>
+			<table>
+				<tr>
+					<td colspan="2" style="background-color: rgb(177, 241, 167); color: black; font-weight: bold; text-align: center;">Student Information</td>
+				</tr>
+				<tr>
+					<td>Student ID:</td>
+					<td id="detail_id"></td>
+				</tr>
+				<tr>
+					<td>Student Name:</td>
+					<td id="detail_name"></td>
+				</tr>
+				<tr>
+					<td>Birthday:</td>
+					<td id="detail_birthday"></td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td id="detail_gender"></td>
+				</tr>
+			</table>
+		</div>
+
+	<script>
+        loadXMLData("datasets/students.xml");
+	</script>
+	</body>
+</html>

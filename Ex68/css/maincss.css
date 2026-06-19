@@ -1,0 +1,21 @@
+button {
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#cdTable {
+    display: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#cdTable th, #cdTable td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+#cdTable th {
+    text-align: center;
+}

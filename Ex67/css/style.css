@@ -1,0 +1,28 @@
+table
+{
+    cursor: pointer;
+    border-collapse: collapse;
+}
+button
+{
+    cursor: pointer;
+}
+table, tr, th, td 
+{   
+    border: 1px;
+	border-style: solid;
+}
+th 
+{
+	background-color: #277c2e;
+	color: white;
+	padding: 10px;
+    border: 1px;
+	border-style: solid;
+    border-color: black;
+}
+td 
+{
+	padding: 10px;
+}
+
